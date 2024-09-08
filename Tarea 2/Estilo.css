@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h1 {
+    background: #f87676;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 -20px 10px -20px;
+}
+
+.personal-info img {
+    max-width: 150px;
+    border-radius: 30%;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #FFD700; 
+    padding: 3px; 
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background: #f87676;
+    color: #fff;
+}
+.trainings ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.trainings ul li {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
