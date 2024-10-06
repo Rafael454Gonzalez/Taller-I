@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nueva Historia Clínica - Clínica Odontológica ULEAM</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluir CSS personalizado -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" class="logo"> <!-- Asegúrate de reemplazar la ruta con la correcta -->
+            Clínica Odontológica ULEAM
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lista de Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Agregar Paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card mt-4">
+            <div class="card-header text-white bg-success">
+                Agregar Nueva Historia Clínica para {{ paciente.nombre }} {{ paciente.apellido }}
+            </div>
+            <div class="card-body border border-danger">
+                <form method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+                    
+                    
+                    <div class="form-group">
+                        <label for="fecha_visita">Fecha de Visita:</label>
+                        <input type="date" class="form-control" id="fecha_visita" name="fecha_visita" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivo_visita">Motivo de la Visita:</label>
+                        <input type="text" class="form-control" id="motivo_visita" name="motivo_visita" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción del Problema:</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tratamiento">Tratamiento Recomendado:</label>
+                        <textarea class="form-control" id="tratamiento" name="tratamiento" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea class="form-control" id="observaciones" name="observaciones" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alergias">Alergias a Medicamentos:</label>
+                        <textarea class="form-control" id="alergias" name="alergias" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="radiografia">Subir Radiografía:</label>
+                        <input type="file" class="form-control-file" id="radiografia" name="radiografia" accept="image/*">
+                    </div>
+
+                    <button type="submit" class="btn btn-danger">Guardar Historia Clínica</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Incluir Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="validacion_agregar.js"></script>
+</body>
+</html>

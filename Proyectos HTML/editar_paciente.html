@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Datos del Paciente - Clínica Odontológica ULEAM</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluir CSS personalizado -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Incluir archivo JavaScript personalizado -->
+    <script src="validacion_editar.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="path/to/logo.png" alt="Logo" class="logo"> <!-- Asegúrate de reemplazar la ruta con la correcta -->
+            Clínica Odontológica ULEAM
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lista de Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Agregar Paciente</a> <!-- Enlace al nuevo paciente -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Iniciar Sesión</a> <!-- Enlace al login -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card mt-4">
+            <div class="card-header text-white bg-success">
+                Editar Datos del Paciente
+            </div>
+            <div class="card-body border border-danger">
+                <form method="POST" onsubmit="return validarFormularioEditar()">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="your_csrf_token_here">
+                    <div class="form-group">
+                        <label for="id_fecha_nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="id_fecha_nacimiento" name="fecha_nacimiento" value="1970-01-01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_telefono">Teléfono</label>
+                        <input type="text" class="form-control" id="id_telefono" name="telefono" value="123-456-7890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_direccion">Dirección</label>
+                        <input type="text" class="form-control" id="id_direccion" name="direccion" value="Calle Falsa 123" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_tipo_sangre">Tipo de Sangre</label>
+                        <input type="text" class="form-control" id="id_tipo_sangre" name="tipo_sangre" value="O+" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_alergias_medicamentos">Alergias a Medicamentos</label>
+                        <textarea class="form-control" id="id_alergias_medicamentos" name="alergias_medicamentos" rows="2" required>Ninguna</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_historial_medico">Historial Médico</label>
+                        <textarea class="form-control" id="id_historial_medico" name="historial_medico" rows="2" required>Sin enfermedades crónicas</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_observaciones">Observaciones</label>
+                        <textarea class="form-control" id="id_observaciones" name="observaciones" rows="2" required>Paciente bajo control dental regular</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_radiografias">Radiografías</label>
+                        <input type="file" class="form-control" id="id_radiografias" name="radiografias" accept="image/*,application/pdf">
+                        <small><a href="#">Ver Radiografías</a></small>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Guardar Cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Incluir Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

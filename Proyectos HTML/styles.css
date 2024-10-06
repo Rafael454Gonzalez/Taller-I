@@ -1,0 +1,39 @@
+body {
+    background-color: #f8f9fa;
+}
+.card-header {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+.card-body {
+    border: 1px solid #dc3545; /* Rojo */
+}
+.btn-primary {
+    background-color: #dc3545; /* Rojo */
+    border-color: #dc3545;
+}
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+.navbar {
+    background-color: #99AE51; /* Color de fondo oscuro */
+}
+.navbar .nav-link {
+    color: white; /* Color de texto blanco */
+    font-size: 1rem; /* Tamaño de texto ajustado */
+}
+.navbar .nav-link:hover {
+    color: #28a745; /* Verde al pasar el mouse */
+}
+.logo {
+    width: 100px; /* Ajusta el tamaño del logo aquí */
+    margin-right: 15px; /* Espacio a la derecha del logo */
+}
+.navbar-brand {
+    font-size: 1.75rem; /* Tamaño del texto de la marca */
+}
+.navbar-text {
+    color: white; /* Color del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+}

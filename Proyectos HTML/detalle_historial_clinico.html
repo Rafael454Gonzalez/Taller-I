@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Historia Clínica - Clínica Odontológica ULEAM</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" class="logo">
+            Clínica Odontológica ULEAM
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lista de Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Agregar Paciente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Detalles de Historia Clínica</h1>
+        <div class="card mt-4">
+            <div class="card-header text-white bg-success">
+                Historia Clínica de {{ paciente.nombre }} {{ paciente.apellido }}
+            </div>
+            <div class="card-body border border-danger">
+                <p><strong>Fecha de Visita:</strong> {{ historia.fecha_visita }}</p>
+                <p><strong>Motivo de la Visita:</strong> {{ historia.motivo_visita }}</p>
+                <p><strong>Descripción del Problema:</strong> {{ historia.descripcion_problema }}</p>
+                <p><strong>Tratamiento Recomendado:</strong> {{ historia.tratamiento_recomendado }}</p>
+                <p><strong>Observaciones:</strong> {{ historia.observaciones }}</p>
+                <p><strong>Alergias a Medicamentos:</strong> {{ historia.alergias_medicamentos }}</p>
+                <p><strong>Radiografía:</strong> <a href="{{ historia.radiografia_url }}">Ver Radiografía</a></p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <a href="#" class="btn btn-danger">Regresar</a>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
