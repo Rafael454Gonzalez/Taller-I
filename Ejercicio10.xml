@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<farmacia>
+    <medicamento>
+        <codigo>1410</codigo>
+        <nombre>paracetamol</nombre>
+        <cantidad>3</cantidad>
+        <unidad>gramos</unidad>
+        <cura>todo</cura>
+        <precio_unidad>0.10</precio_unidad>
+    </medicamento>
+    <medicamento>
+        <codigo>1411</codigo>
+        <nombre>parengel</nombre>
+        <cantidad>4.5</cantidad>
+        <unidad>gramos</unidad>
+        <cura>dolor de cabeza</cura>
+        <precio_unidad>1.40</precio_unidad> <!-- Cambiado a un precio correcto -->
+    </medicamento>
+</farmacia>
